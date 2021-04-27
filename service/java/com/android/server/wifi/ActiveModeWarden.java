@@ -2788,4 +2788,7 @@ public class ActiveModeWarden {
         mSettingsStore.updateSatelliteModeTracker();
         mWifiController.sendMessage(WifiController.CMD_SATELLITE_MODE_CHANGED);
     }
+
+    public void registerStaEventCallback() {}
+    public void unregisterStaEventCallback() {}
 }

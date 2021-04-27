@@ -21,6 +21,7 @@ import android.annotation.Nullable;
 import android.net.DhcpInfo;
 import android.net.DhcpOption;
 import android.net.Network;
+import android.net.wifi.IStaStateCallback;
 import android.net.wifi.hotspot2.IProvisioningCallback;
 import android.net.wifi.hotspot2.OsuProvider;
 import android.net.wifi.hotspot2.PasspointConfiguration;
@@ -1063,6 +1064,17 @@ public class BaseWifiService extends IWifiManager.Stub {
     @Override
     public void getSupportedSimultaneousBandCombinations(IWifiBandsListener listener,
             Bundle extras) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void registerStaStateCallback(
+            IBinder binder, IStaStateCallback callback, int callbackIdentifier) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void unregisterStaStateCallback(int callbackIdentifier) {
         throw new UnsupportedOperationException();
     }
 }
