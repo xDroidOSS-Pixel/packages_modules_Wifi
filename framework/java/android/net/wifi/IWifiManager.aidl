@@ -45,6 +45,7 @@ import android.net.wifi.ISoftApCallback;
 import android.net.wifi.IStringListener;
 import android.net.wifi.ISubsystemRestartCallback;
 import android.net.wifi.ISuggestionConnectionStatusListener;
+import android.net.wifi.IStaStateCallback;
 import android.net.wifi.ISuggestionUserApprovalStatusListener;
 import android.net.wifi.ITrafficStateCallback;
 import android.net.wifi.IWifiBandsListener;
@@ -466,4 +467,9 @@ interface IWifiManager
     void getMaxMloStrLinkCount(in IIntegerListener listener, in Bundle extras);
 
     void getSupportedSimultaneousBandCombinations(in IWifiBandsListener listener, in Bundle extras);
+
+    void registerStaStateCallback(in IBinder binder, in IStaStateCallback callback, int callbackIdentifier);
+
+    void unregisterStaStateCallback(int callbackIdentifier);
+
 }
