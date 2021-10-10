@@ -312,6 +312,7 @@ public class WifiServiceImpl extends BaseWifiService {
     private final DeviceConfigFacade mDeviceConfigFacade;
     private boolean mIsWifiServiceStarted = false;
     private static final String PACKAGE_NAME_NOT_AVAILABLE = "Not Available";
+    private boolean mVerboseLoggingEnabled = false;
 
     /**
      * Callback for use with LocalOnlyHotspot to unregister requesting applications upon death.
